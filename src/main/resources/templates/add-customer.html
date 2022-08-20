@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/customer/th-new}" th:object="${customer}" method="post">
+        <label for="username_input">Username:</label>
+        <input type="text" th:field="*{username}" placeholder="username" id="username_input">
+        <br>
+        <label for="first_name_input">First name:</label>
+        <input type="text" th:field="*{firstName}" placeholder="first name" id="first_name_input">
+        <br>
+        <label for="last_name_input">Last name:</label>
+        <input type="text" th:field="*{lastName}" placeholder="last name" id="last_name_input">
+        <br>
+        <label for="phone_input">Phone number:</label>
+        <input type="text" th:field="*{phone}" placeholder="phone" id="phone_input">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
